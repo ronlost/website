@@ -194,11 +194,11 @@ KUBERNETES_SERVICE_PORT_HTTPS=443
 Kubernetes offers a DNS cluster addon Service that automatically assigns dns names to other Services. You can check if it's running on your cluster:
 
 ```shell
-kubectl get services kube-dns --namespace=kube-system
+kubectl get services coredns --namespace=kube-system
 ```
 ```
-NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
-kube-dns   ClusterIP   10.0.0.10    <none>        53/UDP,53/TCP   8m
+NAME      TYPE      CLUSTER-IP      EXTERNAL-IP   PORT(S)                 AGE
+coredns   Cluster   IP 10.233.0.3    <none>       53/UDP,53/TCP,9153/TCP  2d2h
 ```
 
 The rest of this section will assume you have a Service with a long lived IP
